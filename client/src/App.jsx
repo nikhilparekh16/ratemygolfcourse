@@ -1,10 +1,13 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Courses from "./pages/Courses";
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<div className="text-xl font-bold text-center mt-20">Welcome to RateMyGolfCourse</div>} />
+        <Route path="/" element={<Home />} />
+        <Route path="/courses" element={<Courses />} />
       </Routes>
     </Router>
   );
