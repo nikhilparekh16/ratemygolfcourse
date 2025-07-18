@@ -45,11 +45,11 @@ A full-stack web app where golfers can rate, review, and upload photos of golf c
 3. Create a .env file in server/ with your Supabase credentials
     SUPABASE_URL=...
     SUPABASE_KEY=...
-4. # In one terminal
+4. In one terminal
     cd server
     npm run dev
 
-    # In another terminal
+5. In another terminal
     cd client
     npm run dev
 
