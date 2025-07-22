@@ -42,12 +42,13 @@ A full-stack web app where golfers can rate, review, and upload photos of golf c
    npm install
    cd ../server
    npm install
-3. Create a .env file in server/ with your Supabase credentials
-    SUPABASE_URL=...
-    SUPABASE_KEY=...
+3. Create a `.env` file in `server/` with your database and JWT secret
+    PORT=5001
+    DATABASE_URL=...
+    JWT_SECRET=...
 4. In one terminal
     cd server
-    npm run dev
+    npm run start
 
 5. In another terminal
     cd client
