@@ -61,7 +61,7 @@ export default function Courses() {
         <select
           value={courseType}
           onChange={(e) => setCourseType(e.target.value)}
-          className="p-2 border rounded shadow-sm focus:outline-none focus:ring"
+          className="p-2 border rounded shadow-sm focus:outline-none focus:ring text-black"
         >
           <option value="all">All Types</option>
           <option value="public">Public</option>
@@ -71,7 +71,7 @@ export default function Courses() {
         <select
           value={holeFilter}
           onChange={(e) => setHoleFilter(e.target.value)}
-          className="p-2 border rounded shadow-sm focus:outline-none focus:ring"
+          className="p-2 border rounded shadow-sm focus:outline-none focus:ring text-black"
         >
           <option value="all">All Holes</option>
           <option value="less">Less than 18</option>
