@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import CourseCard from "../components/CourseCard";
+import Header from "../components/Header";
 
 export default function Courses() {
   const [courses, setCourses] = useState([]);
@@ -42,7 +43,9 @@ export default function Courses() {
   });
 
   return (
-    <div className="p-8">
+    <>
+      <Header />
+      <div className="p-8">
       <h1 className="text-3xl font-bold mb-6">All Golf Courses</h1>
 
       {/* Filters Section */}
@@ -88,5 +91,6 @@ export default function Courses() {
         </div>
       )}
     </div>
+    </>
   );
 }
