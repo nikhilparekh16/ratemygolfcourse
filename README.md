@@ -46,11 +46,50 @@ A full-stack web app where golfers can rate, review, and upload photos of golf c
     PORT=5001
     DATABASE_URL=...
     JWT_SECRET=...
-4. In one terminal
+
+4. Upload and run this schema into the supabase
+    --Users
+    create table users (
+    id uuid primary key default gen_random_uuid(),
+    email text not null,
+    password_hash text not null,
+    created_at timestamp default now()
+    );
+
+    -- Golf Courses
+    create table courses (
+    id uuid primary key default gen_random_uuid(),
+    name text not null,
+    location text,
+    description text,
+    created_at timestamp default now()
+    );
+
+    -- Reviews
+    create table reviews (
+    id uuid primary key default gen_random_uuid(),
+    user_id uuid references users(id),
+    course_id uuid references courses(id),
+    rating integer check (rating >= 1 and rating <= 5),
+    text text,
+    created_at timestamp default now()
+    );
+
+    -- Review Images
+    create table images (
+    id uuid primary key default gen_random_uuid(),
+    review_id uuid references reviews(id),
+    image_url text not null,
+    uploaded_at timestamp default now()
+    );
+
+5. Upload Golf - Sheet1.csv in Supabase
+
+5. In one terminal
     cd server
     npm run start
 
-5. In another terminal
+6. In another terminal
     cd client
     npm run dev
 
