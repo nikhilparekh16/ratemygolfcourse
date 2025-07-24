@@ -43,9 +43,9 @@ A full-stack web app where golfers can rate, review, and upload photos of golf c
    cd ../server
    npm install
 3. Create a `.env` file in `server/` with your database and JWT secret
-    PORT=5001
-    DATABASE_URL=...
-    JWT_SECRET=...
+    `PORT=5001`
+    `DATABASE_URL=...`
+    `JWT_SECRET=...`
 
 4. Upload and run this schema into the supabase
     ```sql
