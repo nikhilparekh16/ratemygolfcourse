@@ -8,9 +8,9 @@ export default function Login() {
         <h1 className="text-3xl font-semibold mb-4">Login</h1>
             <form>
                 <label for="email">Email:</label><br></br>
-                <input className="mb-4" type="email" id="email" name="email"></input><br></br>
+                <input className="mb-4 text-black" type="email" id="email" name="email"></input><br></br>
                 <label for="pass">Password:</label><br></br>
-                <input type="text" id="pass" name="pass"></input><br></br>
+                <input className="mb-4 text-black" type="text" id="pass" name="pass"></input><br></br>
             </form>
         </div>
         </>

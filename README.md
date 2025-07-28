@@ -87,10 +87,12 @@ A full-stack web app where golfers can rate, review, and upload photos of golf c
 5. Upload Golf - Sheet1.csv in Supabase
 
 5. In one terminal
+    ```bash
     cd server
     npm run start
 
 6. In another terminal
+    ```bash
     cd client
     npm run dev
 

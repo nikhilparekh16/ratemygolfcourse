@@ -9,7 +9,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get("/", (req, res) =>{
+app.get("/", (req, res) =>{ //confirms backend is running, check at http://localhost:5001/
     res.send("Welcome to the RateMyGolfCourse API");
 });
 
