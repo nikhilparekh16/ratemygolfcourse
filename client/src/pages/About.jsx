@@ -7,8 +7,7 @@ export default function About() {
             <div>
                 <h1 className="text-3xl font-semibold mb-4">About</h1>
                 <hr ></hr>
-                <br></br>
-                <p className="text-xl mb-8">Welcome to RateMyGolfCourse! 
+                <p className="text-xl font-semibold mb-4">Welcome to RateMyGolfCourse! 
                     RateMyGolfCourse is an interactive web application that allows golf lovers to discover 
                     and share their experiences about golf courses in New Jersey. 
                     RateMyGolfCourse allows users to search for public and private courses, filter by number of holes, 
