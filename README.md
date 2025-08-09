@@ -42,12 +42,16 @@ A full-stack web app where golfers can rate, review, and upload photos of golf c
    npm install
    cd ../server
    npm install
-3. Create a `.env` file in `server/` with your database and JWT secret
+3. Create a `.env` file in `client/` with your VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY
+    `VITE_SUPABASE_URL=...`
+    `VITE_SUPABASE_ANON_KEY=...`
+
+4. Create a `.env` file in `server/` with your database and JWT secret
     `PORT=5001`
     `DATABASE_URL=...`
     `JWT_SECRET=...`
 
-4. Upload and run this schema into the supabase
+5. Upload and run this schema into the supabase
     ```sql
     --Users
     create table users (
@@ -84,14 +88,14 @@ A full-stack web app where golfers can rate, review, and upload photos of golf c
         uploaded_at timestamp default now()
     );
 
-5. Upload Golf - Sheet1.csv in Supabase
+6. Upload Golf - Sheet1.csv in Supabase
 
-5. In one terminal
+7. In one terminal
     ```bash
     cd server
     npm run start
 
-6. In another terminal
+8. In another terminal
     ```bash
     cd client
     npm run dev
