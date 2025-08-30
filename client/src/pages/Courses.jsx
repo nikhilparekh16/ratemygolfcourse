@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import CourseCard from "../components/CourseCard";
 import Header from "../components/Header";
+import { Link } from "react-router-dom";
 
 export default function Courses() {
   const [courses, setCourses] = useState([]);
@@ -55,7 +56,7 @@ export default function Courses() {
           placeholder="Search by name or location..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="p-2 border rounded shadow-sm focus:outline-none focus:ring w-full sm:w-64"
+          className="p-2 border rounded shadow-sm focus:outline-none focus:ring w-full sm:w-64 text-black"
         />
 
         <select
@@ -86,8 +87,16 @@ export default function Courses() {
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {filteredCourses.map((course) => (
-            <CourseCard key={course.id} course={course} />
-          ))}
+            <div key={course.id}>
+              <CourseCard course={course} />
+              <Link
+              to={`/courses/${course.id}/reviews`}
+              className="mt-2 inline-block bg-green-600 text-white px-3 py-1 rounded hover:bg-green-700 transition"
+              >
+                View Reviews
+              </Link>
+            </div>
+            ))}
         </div>
       )}
     </div>
