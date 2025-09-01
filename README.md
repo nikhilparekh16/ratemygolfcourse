@@ -66,7 +66,8 @@ A full-stack web app where golfers can rate, review, and upload photos of golf c
         id uuid primary key default gen_random_uuid(),
         name text not null,
         location text,
-        description text,
+        holes integer,
+        course_type text,
         created_at timestamp default now()
     );
 
