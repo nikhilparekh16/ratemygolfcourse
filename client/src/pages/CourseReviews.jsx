@@ -151,7 +151,7 @@ export default function CourseReviews() {
               <li key={review.id} className="mb-4 p-3 border-b text-black">
                 <p className="font-semibold">Rating: {review.rating} ⭐</p>
                 <p>{review.text}</p>
-                <p className="text-sm text-black">
+                <p className="text-sm">
                   {new Date(review.created_at).toLocaleDateString()}
                 </p>
               </li>
