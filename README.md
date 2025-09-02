@@ -43,14 +43,6 @@ A full-stack web app where golfers can rate, review, and upload photos of golf c
 
 5. Upload and run this schema into the supabase
     ```sql
-    --Users
-    create table users (
-        id uuid primary key default gen_random_uuid(),
-        email text not null,
-        password_hash text not null,
-        created_at timestamp default now()
-    );
-
     -- Golf Courses
     create table courses (
         id uuid primary key default gen_random_uuid(),
