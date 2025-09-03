@@ -67,6 +67,7 @@ export default function Courses() {
           <option value="all">All Types</option>
           <option value="public">Public</option>
           <option value="private">Private</option>
+          <option value="semi-private">Semi-Private</option>
         </select>
 
         <select
