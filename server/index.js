@@ -18,8 +18,8 @@ app.get("/api/courses", async (req, res) => {
     const result = await pool.query("SELECT * FROM courses");
     res.json(result.rows);
   } catch (err) {
-    console.error(err.message);
-    res.status(500).send("Server error");
+    console.error("DB ERROR:", err);
+    res.status(500).json({ error: err.message });
   }
 });
 
