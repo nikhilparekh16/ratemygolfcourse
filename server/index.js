@@ -26,16 +26,21 @@ app.get("/api/courses", async (req, res) => {
   }
 });
 
-// --- Serve React build ---
+// --- Serve Vite React build ---
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+// Serve static files from the React app
 app.use(express.static(path.join(__dirname, "../client/dist")));
 
-// Fallback route: send index.html for all non-API requests
+// Fallback: send index.html for all non-API routes (needed for React Router)
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../client/dist/index.html"));
+  // Only handle requests that are not API calls
+  if (!req.path.startsWith("/api")) {
+    res.sendFile(path.join(__dirname, "../client/dist/index.html"));
+  }
 });
 
+// Start the server
 const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
