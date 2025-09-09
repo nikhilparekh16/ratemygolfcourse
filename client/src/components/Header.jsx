@@ -28,7 +28,7 @@ export default function Header() {
         <a href="/" className="text-2xl font-bold">RateMyGolfCourse</a>
         <nav className="space-x-4">
           <a href="/">Home</a>
-          <a href="/about">About</a>
+          <Link to="/about">About</Link>
           {user ? (
             <button onClick={handleSignOut} className="px-4 py-2 bg-gray-500 text-white rounded hover:bg-blue-600 transition duration-250">
               Sign Out
